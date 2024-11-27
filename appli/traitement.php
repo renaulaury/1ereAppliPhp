@@ -6,13 +6,14 @@ if (isset($_POST['submit'])) { //vérif de la clé submit dans le tableau post d
     $price = filter_input(INPUT_POST, "price", FILTER_VALIDATE_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
     $qtt = filter_input(INPUT_POST, "qtt", FILTER_VALIDATE_INT);
 
-    if($name && $price && $qtt) {
+    if($name && $price && $qtt) { //Vérification parametre valides
         $product = [
             "name" => $name,
             "price" => $price,
             "qtt" => $qtt,
             "total" => $price * $qtt
         ];
+        $_SESSION['products'][] = $product;
     }
 }                               
 
