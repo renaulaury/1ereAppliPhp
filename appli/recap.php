@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./styles.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
     <title>Récap des produits</title>
 </head>
 <body>
@@ -27,17 +27,25 @@ session_start();
             "</thead>",
         "<tbody>";
 
+        $totalGeneral = 0;
+
         foreach($_SESSION['products'] as $index => $product) {
             echo "<tr>",
-                    "<td>".$index."<td>",
-                    "<td>".$product['name']."<td>",
-                    "<td>".$product['price']."<td>",
-                    "<td>".$product['qtt']."<td>",
-                    "<td>".$product['total']."<td>",
+                    "<td>".$index."</td>",
+                    "<td>".$product['name']."</td>",
+                    "<td>".number_format($product['price'], 2, ",", "&nbsp;"). "&nbsp;€</td>",
+                    // "<td>".$product['price']."</td>",
+                    "<td>".$product['qtt']."</td>",
+                    "<td>".number_format($product['total'], 2, ",", "&nbsp;"). "&nbsp;€</td>",
+                    // "<td>".$product['total']."</td>",
                  "<tr>";
+                $totalGeneral += $product['total'];
         }
 
-        echo "</table>",
+        echo "<tr>",
+                "<td colspan=4>Total Général : </td>",
+                "<td><strong>".number_format($totalGeneral, 2, ",", "&nbsp"), "&nbsp;€</strong></td>",
+          "</table>",
         "</tbody>";
     }
 ?>
