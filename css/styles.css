@@ -3,6 +3,8 @@
     padding:0;
 }
 
+
+
 /*header*/
 #navbar ul {
     padding: 2%;
@@ -13,11 +15,11 @@
 
 #navbar li {
     list-style-type: none;
+    text-decoration: none;
 }
 
 #navbar a {
     color: #f69d3c;
-    text-decoration: none;
 }
 
 /*Main index*/
@@ -56,6 +58,10 @@ form p {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.lien {   
+    text-decoration: none;
 }
 
 th {

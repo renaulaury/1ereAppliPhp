@@ -15,6 +15,23 @@ if (isset($_POST['submit'])) { //vérif de la clé submit dans le tableau post d
         ];
         $_SESSION['products'][] = $product;
     }
-}                               
+}    
+
+if(isset($_GET['action'])) {
+    switch($_GET['action']) {
+        case "add":
+            //si je clique sur + qtt +1 sinon qtt -1
+            echo "";
+            break;
+        case "delete":
+            echo "";
+            break;
+    }
+}
+
 
 header("location:index.php"); //si non renvoie index.php
+
+
+
+

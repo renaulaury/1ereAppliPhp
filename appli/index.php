@@ -57,7 +57,7 @@ session_start();
                 </p>
 
                 <p>
-                    <label>Quantité désirée :
+                    <label>Quantité désirée :                   
                         <input type="number" name="qtt" value="1">
                     </label>
                 </p>
