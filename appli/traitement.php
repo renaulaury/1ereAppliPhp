@@ -17,20 +17,26 @@ if (isset($_POST['submit'])) { //vérif de la clé submit dans le tableau post d
     }
 }    
 
+// header("location:index.php"); //si non renvoie index.php         
+         
+
 if(isset($_GET['action'])) {
     switch($_GET['action']) {
         case "add":
-            //si je clique sur + qtt +1 sinon qtt -1
-            echo "";
+            //si je clique sur + qtt +1 
+            $qtt = $qtt + 1;
+           echo "<td><a class='lien' href='./traitement.php'>+</a>".$product['qtt']."<a class='lien' href='./traitement.php'>-</a></td>";
+            
+            // echo $qtt;
             break;
-        case "delete":
+        case "delete"://sinon qtt -1
             echo "";
             break;
     }
 }
 
 
-header("location:index.php"); //si non renvoie index.php
+header("location:traitement.php"); 
 
 
 

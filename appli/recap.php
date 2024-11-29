@@ -53,7 +53,7 @@ session_start();
                             "<td><a class='lien' href='./traitement.php'>+</a>".$product['qtt']."<a class='lien' href='./traitement.php'>-</a></td>",
                             "<td>".number_format($product['total'], 2, ",", "&nbsp;"). "&nbsp;€</td>",
                             // "<td>".$product['total']."</td>",
-                            "<td><a class='lien' href='./traitement.php'><i class='fa-solid fa-trash'></i></td>",
+                            "<td class='col'><a class='lien' href='./traitement.php'><i class='fa-solid fa-trash'></i></td>",
                         "</tr>";
                         $totalGeneral += $product['total'];
                 }
@@ -61,7 +61,7 @@ session_start();
                 echo "<tr class='tot'>",
                         "<td colspan=4 class='total'>Total Général : </td>",
                         "<td><strong>".number_format($totalGeneral, 2, ",", "&nbsp"), "&nbsp;€</strong></td>",
-                        "<td><a class='lien' href='./traitement.php'>Tout supprimer</td>",
+                        "<td class='col'><a class='lien' href='./traitement.php'><i class='fa-solid fa-dumpster-fire'></i></td>",
                     "</tr>",
                     "</tbody>",
                 "</table>";      

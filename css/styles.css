@@ -60,8 +60,12 @@ form p {
     justify-content: center;
 }
 
+.col {
+    width: 10%;
+}
 .lien {   
     text-decoration: none;
+    padding: 5%;
 }
 
 th {
