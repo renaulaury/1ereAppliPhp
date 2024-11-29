@@ -23,22 +23,24 @@ if(isset($_GET['action'])) {
             
             header("location:index.php"); //si non renvoie index.php  
             break;  
+
         case "delete":
-
+            /* quand je clique ca supprime l'index */
+            // $product[$index] = [];
             break;
+
         case "clear":
-
+            /* quand je clic ca supprime toutes les lignes*/
+                $_SESSION['products'] = [];
             break;
+
         case "up-qtt":
-            /*tu parcours le tableau rechercher la quantité lié a l index puis
-            tu incrémente la quantité.*/
-            $ajout = 0;
-            foreach($_SESSION['products'] as $index => $product) {
-                $product['qtt'] = $product['qtt'] + 1;
-            }
-            echo $product['qtt'];
+            /*quand je clic ca ajoute 1*/
 
+            // $product['qtt'] = $product['qtt'] + 1;
+           
             break;
+
         case "down-qtt":
 
             break;

@@ -50,7 +50,7 @@ session_start();
                             "<td>".$product['name']."</td>",
                             "<td>".number_format($product['price'], 2, ",", "&nbsp;"). "&nbsp;€</td>",
                             // "<td>".$product['price']."</td>",
-                            "<td><a class='lien' href='traitement.php?action=up-qtt'>+</a>".$product['qtt']."<a class='lien' href='traitement.php?action=down-qtt'>-</a></td>",
+                            "<td><a class='lien' href='traitement.php?action=up-qtt&id=$index'>+</a>".$product['qtt']."<a class='lien' href='traitement.php?action=down-qtt&id=$index'>-</a></td>",
                             "<td>".number_format($product['total'], 2, ",", "&nbsp;"). "&nbsp;€</td>",
                             // "<td>".$product['total']."</td>",
                             "<td class='col'><a class='lien' href='traitement.php?action=delete&id=$index'><i class='fa-solid fa-trash'></i></td>",
