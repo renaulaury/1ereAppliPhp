@@ -1,8 +1,85 @@
+* {
+    margin : 0;
+    padding:0;
+}
+
+/*header*/
+#navbar ul {
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#navbar li {
+    list-style-type: none;
+}
+
+#navbar a {
+    color: #f69d3c;
+    text-decoration: none;
+}
+
+/*Main index*/
+h1 {
+    text-align: center;
+    padding-bottom: 3%;
+    color: #3f87a6;
+}
+
+.panier {
+    padding-bottom: 5%;
+}
+
+/*Formulaire*/
+.formulaire {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    padding: 3%;
+    width: 30%;
+    background: linear-gradient(#f69d3c, #3f87a6);
+    border-radius: 30px;
+}
+
+form p {
+    padding: 2%;
+    text-align: center;
+}
+
+/*Main Récapitulatif*/
+.commande {
+    padding-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 th {
     width: 100px;
 }
 
 th, td {
+    padding: 3% 0;
     text-align: center;
 }
+
+.entete {
+    background-color: #f69d3c;
+}
+
+.tot {
+    border-radius: 50%;
+    background: linear-gradient(#3f87a6, #f69d3c);
+    color: white;
+}
+
+.total {
+    text-align: end;
+    padding-right: 2%;
+}
+
 
