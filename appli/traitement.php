@@ -30,11 +30,13 @@ if(isset($_GET['action'])) {
 
             break;
         case "up-qtt":
-            foreach($_SESSION['products'] as $index => $qtt) {
-                $product['qtt']++;
-                $index++;
+            /*tu parcours le tableau rechercher la quantité lié a l index puis
+            tu incrémente la quantité.*/
+            $ajout = 0;
+            foreach($_SESSION['products'] as $index => $product) {
+                $product['qtt'] = $product['qtt'] + 1;
             }
-            echo $qtt;
+            echo $product['qtt'];
 
             break;
         case "down-qtt":
@@ -42,7 +44,6 @@ if(isset($_GET['action'])) {
             break;
     }
 }
-
 
 header("location:recap.php"); 
 
