@@ -26,7 +26,7 @@ session_start();
         <h1>Ajouter un produit</h1>
 
         <div class="formulaire">
-            <form action="traitement.php" method="post">                
+            <form action="traitement.php?action=add" method="post">                
 
                 <p class='panier'>Produits dans le panier :
                 <?php   
