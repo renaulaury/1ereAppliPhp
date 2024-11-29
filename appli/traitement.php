@@ -27,6 +27,7 @@ if(isset($_GET['action'])) {
         case "delete":
             /* quand je clique ca supprime l'index */
             // $product[$index] = [];
+           
             break;
 
         case "clear":
